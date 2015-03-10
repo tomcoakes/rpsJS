@@ -29,17 +29,25 @@ describe("Game Logic", function() {
   it("declares a draw when playerOne and playerTwo both choose 'paper'", function() {
     game.addPlayer(playerOne);
     game.addPlayer(playerTwo);
-    spyOn(playerOne, "chooseWeapon").and.returnValue("paper");
-    spyOn(playerTwo, "chooseWeapon").and.returnValue("paper");
+    playerOne.chooseWeapon("paper");
+    playerTwo.chooseWeapon("paper");
     expect(game.winner()).toBe("Draw");
   });
 
   it("declares that playerOne wins when they choose rock and playerTwo chooses scissors", function() {
     game.addPlayer(playerOne);
     game.addPlayer(playerTwo);
-    spyOn(playerOne, "chooseWeapon").and.returnValue("rock");
-    spyOn(playerTwo, "chooseWeapon").and.returnValue("scissors");
+    playerOne.chooseWeapon("rock");
+    playerTwo.chooseWeapon("scissors");
     expect(game.winner()).toBe("Tom");
+  });
+
+  it("declares that playerTwo wins when they choose paper and playerOne chooses rock", function() {
+    game.addPlayer(playerOne);
+    game.addPlayer(playerTwo);
+    playerOne.chooseWeapon("rock");
+    playerTwo.chooseWeapon("paper");
+    expect(game.winner()).toBe("Petra");    
   });
 
 });
