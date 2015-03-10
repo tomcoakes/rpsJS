@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock, Paper, Scissors in JavaScript</title>
+    <link href="/styles/main.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/scripts/Game.js"></script>
+    <script src="/scripts/Player.js"></script>
+    <script src="/scripts/Interface.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Rock, Paper, Scissors</h1>
+    </header>
+    
+    <div class="container">
+
+      <section id="name_input" class="group">
+        <form action="#"> 
+          <input type="text" name="name" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Enter your name to play.</label>
+        </form>
+      </section>
+      
+      <section id="weapon_choice">
+        <p>Choose your weapon, <span id="playername"></span></p>
+        <a id="rock" class="button-link" href="#">Rock</a>
+        <a id="paper" class="button-link" href="#">Paper</a>
+        <a id="scissors" class="button-link" href="#">Scissors</a>
+      </section>
+
+      <section>
+      <p id="winner"></p>
+      </section>
+
+    </div>
+
+  </body>
+
+
+</html>

@@ -47,7 +47,7 @@ $(document).ready(function() {
   };
 
   hideNameInput = function() {
-    $("#name_input").css("visibility", "hidden");
+    $("#name_input").remove();
   };
 
   addPlayer = function() {
