@@ -1,0 +1,11 @@
+body {
+  background-color: #E87E04;
+  color: white;
+  font-family: Helvetica;
+  margin: auto;
+  text-align: center;
+}
+
+#weapon_choice {
+  visibility: hidden;
+}

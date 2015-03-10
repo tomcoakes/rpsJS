@@ -11,4 +11,10 @@ describe("Player", function() {
     expect(player.weapon).toBe("rock");
   });
 
+  xit("can choose a random weapon", function() {
+    var computer = new Player("Computer");
+    computer.chooseRandomWeapon();
+    expect(computer.weapon).toBe("rock");
+  });
+
 });
